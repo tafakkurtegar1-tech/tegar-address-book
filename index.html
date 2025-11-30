@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book App</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        .page-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-green-100 min-h-screen">
+    
+    <div class="flex h-screen overflow-hidden">
+        
+        <aside class="w-72 bg-gray-100 border-r p-6 flex flex-col shadow-lg">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Profile</h2>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="assets/profile.jpg" alt="Profile" class="w-16 h-16 rounded-full border-2 border-gray-200">
+                    <div>
+                        <p class="font-semibold text-gray-800">Tegar Tali Tafakur</p>
+                        <p class="text-sm text-gray-500">tafakkurtegar1@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 space-y-3 text-sm text-gray-600">
+                    <div class="flex items-center">
+                        <span class="mr-3">🗓️</span> <span>19-08-2005</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mr-3">📞</span> <span>12345678910</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="mr-3">📍</span> <span>Jawa Barat</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="flex-1 overflow-y-auto p-8">
+            <header class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Address Book</h1>
+                <div class="flex space-x-3">
+                    
+                    <button onclick="showPage('add-contact-page')"
+                            class="bg-blue-300 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md flex items-center space-x-1 transition duration-150">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        <span>New contact</span>
+                    </button>
+                </div>
+            </header>
+            
+            <div id="contact-view-area">
+                
+                <form id="search-form" class="mb-6">
+                    <input type="text" id="searchKeyword" placeholder="Search..."
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                </form>
+
+                <section id="contact-list-page">
+                    <div id="contact-list-container" class="overflow-x-auto">
+                        </div>
+                </section>
+
+                <section id="add-contact-page" class="page-hidden">
+                    <div class="max-w-xl mx-auto">
+                        <div class="flex items-center space-x-4 mb-8">
+
+                            <h2 class="text-2xl font-semibold text-blue-800">Create New Contact</h2>
+                        </div>
+                        
+                        <form id="contact-form" class="flex flex-col space-y-4 p-6 border border-gray-200 rounded-xl bg-white shadow-lg">
+                            
+                            <label class="block">
+                                <span class="text-gray-700 font-medium">Full Name</span> 
+                                <input type="text" id="fullName" placeholder="Name" required 
+                                       class="p-3 border border-gray-300 rounded-lg w-full mt-1 focus:ring-green-500 focus:border-green-500">
+                            </label>
+                            
+                            <label class="block">
+                                <span class="text-gray-700 font-medium">Phone</span>
+                                <input type="text" id="phone" placeholder="+62-812-..." required
+                                       class="p-3 border border-gray-300 rounded-lg w-full mt-1 focus:ring-green-500 focus:border-green-500">
+                            </label>
+                            
+                            <label class="block">
+                                <span class="text-gray-700 font-medium">Email</span>
+                                <input type="email" id="email" placeholder="tegar@example.com" required
+                                       class="p-3 border border-gray-300 rounded-lg w-full mt-1 focus:ring-green-500 focus:border-green-500">
+                            </label>
+                            
+                            <label class="block">
+                                <span class="text-gray-700 font-medium">City</span>
+                                <input type="text" id="location" placeholder="Konoha" required
+                                       class="p-3 border border-gray-300 rounded-lg w-full mt-1 focus:ring-green-500 focus:border-green-500">
+                            </label>
+                            
+                            <div class="flex justify-end gap-4 pt-6 border-t border-gray-100 mt-6">
+                                
+                                <button type="submit" 
+                                        class="bg-blue-300 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-150 ease-in-out">
+                                    Save Contact
+                                </button>
+
+                                <button type="button" onclick="showPage('contact-list-page')"
+                                        class="bg-red-500 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-lg transition duration-150 ease-in-out">
+                                    Cancelled
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                
+            </div> 
+            </div> 
+            </div> 
+            <script src="script/script.js"></script> 
+</body>
+</html>
