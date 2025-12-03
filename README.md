@@ -13,3 +13,4 @@
 <img src="assets/detail.png" style="width:50%" />
 
 ## Link Web nya
+[clik me]()
