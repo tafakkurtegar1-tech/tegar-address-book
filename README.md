@@ -1,6 +1,6 @@
-# Proyek Address BOOK untuk Tugas UAS MataKuliah Pemograman WEB
+# Aplikasi Address BOOK untuk Tugas UAS MataKuliah Pemograman WEB
 
-## Tampilan Diagram Flowchart Yang saya buat di Draiwo
+## Tampilan Diagram Flowchart Yang saya buat di Draiwo untuk menjelaskan alur aplikasinya
 <img src="assets/Flowchart.png" style="width:70%" />
 
 ## Tampilan Halaman index.html 
@@ -18,7 +18,7 @@
 
 ### Ketika tombol detail di klik maka tampilan akanseperti ini, yang menampilkan detail kontak.Di halaman detail, ada tombol kembali yang ketika di klik maka akan kembali ke halaman index.html yang merupakan tampilan awal halaman 
 
-## Link Web Address book
+## Link Web Aplikasi Address book
 [clik me](https://tegar-address-book.vercel.app/)
 
 # Terima Kasih
